@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>
+Login page
+</title>
+<script type="text/javascript">
+function loginfunction()
+{
+var un=document.forms["myform"]["username"].value;
+var pass=document.forms["myform"]["password"].value;
+if(un=="")
+{
+alert("please enter valid username");
+}
+if(pass=="")
+{
+alert("please enter valid password");
+}
+if(un=="dharani" && pass=="1234")
+{
+window.location.href("welcome.html");
+}}
+</script>
+<style>
+body{
+background:aqua;
+}
+.container
+{
+width:350px:
+margin:auto;
+margin:10 0 0 450px;
+overflow:hidden;
+padding:75px;
+background:#003300;
+}
+h1{
+text-align:center;
+padding:10px;
+}
+label{
+color:white;
+padding-left:10px;
+}
+.inputtext{
+width:300px;
+height:30px;
+border:none;
+border-radius:2px;
+padding-left:8px;
+}
+#loginbtn{
+width:100px;
+height:30px;
+border:none;
+border-radius:10px;
+padding-left:8px;
+
+}
+</style>
+</head>
+<body>
+<h1>Login Form</h1>
+<div class="container">
+<form name="myform" mehod="post" action="welcome.html" >
+<label>User name</label>
+<input type="text" name="username" class="inputtext" id="uname" placeholder="user name"></input><br>
+<br>
+<label>Password</label>
+<input type="password" name="password" class="inputtext" id="upwd" placeholder="password"></input>
+<br><br>
+<input type="button" name="log" id="loginbtn" value="login" onclick="loginfunction()" ></input>
+<input type="reset" id="resetbtn" ></input>
+
+</form>
+</div>
+</body>
+</html>
